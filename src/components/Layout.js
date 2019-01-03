@@ -81,8 +81,15 @@ class Layout extends React.Component {
               <strong>&copy; 2018 Copyright Romain Lanz. All rights reserved.</strong>
             </small>
             <small>
-              This site is built with <a href="https://www.gatsbyjs.org">Gatsby</a> and hosted on{' '}
-              <a href="https://www.netlify.com/">Netlify</a>.
+              This site is built with{' '}
+              <a href="https://www.gatsbyjs.org" target="_blank" rel="nofollow noopener noreferrer">
+                Gatsby
+              </a>{' '}
+              and hosted on{' '}
+              <a href="https://www.netlify.com/" target="_blank" rel="nofollow noopener noreferrer">
+                Netlify
+              </a>
+              .
             </small>
           </p>
         </footer>
