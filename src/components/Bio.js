@@ -29,7 +29,7 @@ function Bio() {
               }}
             />
             <p>
-              Written by <a href={`https://twitter.com/${social.twitter}`}>{author}</a>.
+              Personal blog by <a href={`https://twitter.com/${social.twitter}`}>{author}</a>.
             </p>
           </div>
         )
