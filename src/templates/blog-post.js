@@ -1,10 +1,39 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import styled from 'styled-components'
 
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import { rhythm, scale } from '../utils/typography'
+
+const TableOfContents = styled.div`
+  ul {
+    margin-left: 0;
+    list-style: none;
+  }
+
+  li {
+    margin-bottom: 0;
+  }
+
+  li:before {
+    content: '# ';
+    margin-right: 10px;
+    opacity: 0.3;
+  }
+
+  a {
+    color: #3f6fa9;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 200ms;
+  }
+
+  a:hover {
+    border-color: #3f6fa9;
+  }
+`
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -26,6 +55,7 @@ class BlogPostTemplate extends React.Component {
         >
           Published {post.frontmatter.date} | ~ Reading Time: {post.timeToRead} mins
         </p>
+        <TableOfContents dangerouslySetInnerHTML={{ __html: post.tableOfContents }} />
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
@@ -78,6 +108,7 @@ export const pageQuery = graphql`
       excerpt(pruneLength: 160)
       html
       timeToRead
+      tableOfContents
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
