@@ -1,17 +1,13 @@
 import Typography from 'typography'
-import Wordpress2016 from 'typography-theme-wordpress-2016'
+import GrandViewTheme from 'typography-theme-grand-view'
 
-Wordpress2016.overrideThemeStyles = () => {
-  return {
-    'a.gatsby-resp-image-link': {
-      boxShadow: `none`,
-    },
-  }
-}
+GrandViewTheme.overrideStyles = () => ({
+  'p': {
+    letterSpacing: '1px',
+  },
+})
 
-delete Wordpress2016.googleFonts
-
-const typography = new Typography(Wordpress2016)
+const typography = new Typography(GrandViewTheme)
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== `production`) {

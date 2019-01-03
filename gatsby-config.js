@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    title: `Slynova.io`,
+    author: `Romain Lanz`,
+    description: `Sharing thoughts, ideas and knowledge.`,
+    siteUrl: `https://slynova.io`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `romainlanz`,
     },
   },
   plugins: [
@@ -57,11 +57,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Slynova.io`,
+        short_name: `Slynova.io`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#306FAE`,
         display: `minimal-ui`,
         icon: `content/assets/gatsby-icon.png`,
       },
