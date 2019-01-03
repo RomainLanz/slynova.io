@@ -5,11 +5,13 @@ const typography = new Typography({
   baseLineHeight: '37px',
   headerFontFamily: ['Fira Sans'],
   bodyFontFamily: ['Fira Sans'],
-  googleFonts: [{
-    name: 'Fira Sans',
-    styles: ['400', '400i', '700', '700i']
-  }],
-  overrideStyles:() => ({
+  googleFonts: [
+    {
+      name: 'Fira Sans',
+      styles: ['400', '400i', '700', '700i'],
+    },
+  ],
+  overrideStyles: () => ({
     'a.gatsby-resp-image-link': {
       background: 'none',
     },
@@ -23,15 +25,15 @@ const typography = new Typography({
       backgroundPosition: 'left 0 bottom 0',
     },
     'p code': {
-      fontSize: '1.1rem'
+      fontSize: '1.1rem',
     },
     'li code': {
-      fontSize: '1rem'
+      fontSize: '1rem',
     },
-    'h1': {
+    h1: {
       fontSize: '90px',
     },
-  })
+  }),
 })
 
 // Hot reload typography in development.

@@ -14,9 +14,7 @@ class BlogIndex extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-        />
+        <SEO keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
         <Bio />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
@@ -37,11 +35,15 @@ class BlogIndex extends React.Component {
                     backgroundSize: '100% .2em',
                     backgroundRepeat: 'no-repeat',
                     backgroundPosition: 'left 0 bottom 0',
-                  }} to={node.fields.slug}>
+                  }}
+                  to={node.fields.slug}
+                >
                   {title}
                 </Link>
               </h3>
-              <small>Published {node.frontmatter.date} | ~ Reading Time: {node.timeToRead} mins</small>
+              <small>
+                Published {node.frontmatter.date} | ~ Reading Time: {node.timeToRead} mins
+              </small>
               <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
             </div>
           )

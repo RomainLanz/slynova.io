@@ -9,20 +9,20 @@ function SEO({ description, lang, meta, keywords, title }) {
       query={detailsQuery}
       render={data => {
         const { siteMetadata } = data.site
-        const metaDescription =
-          description || data.site.siteMetadata.description
+        const metaDescription = description || data.site.siteMetadata.description
         return (
           <Helmet
             htmlAttributes={{
               lang,
             }}
-            {...(title ? {
-                titleTemplate: `%s - ${siteMetadata.title}`,
-                title,
-              } : {
-                title: siteMetadata.title,
-              })
-            }
+            {...(title
+              ? {
+                  titleTemplate: `%s - ${siteMetadata.title}`,
+                  title,
+                }
+              : {
+                  title: siteMetadata.title,
+                })}
             meta={[
               {
                 name: `description`,

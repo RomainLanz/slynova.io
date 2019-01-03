@@ -62,8 +62,29 @@ class Layout extends React.Component {
       >
         {header}
         {children}
-        <footer>
-          © 2018, Built with 💜
+        <footer
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <p
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <small>
+              <strong>&copy; 2018 Copyright Romain Lanz. All rights reserved.</strong>
+            </small>
+            <small>
+              This site is built with <a href="https://www.gatsbyjs.org">Gatsby</a> and hosted on{' '}
+              <a href="https://www.netlify.com/">Netlify</a>.
+            </small>
+          </p>
         </footer>
       </div>
     )
