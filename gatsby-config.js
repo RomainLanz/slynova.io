@@ -5,7 +5,7 @@ module.exports = {
     description: `Sharing thoughts, ideas and knowledge.`,
     siteUrl: `https://slynova.io`,
     social: {
-      twitter: `romainlanz`,
+      twitter: `@romainlanz`,
     },
   },
   plugins: [
