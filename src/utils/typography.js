@@ -11,20 +11,16 @@ const typography = new Typography({
   }],
   overrideStyles:() => ({
     'a.gatsby-resp-image-link': {
-      boxShadow: 'none',
+      background: 'none',
     },
     'p a': {
       color: 'inherit',
       outline: 'none',
       textDecoration: 'none',
-      transition: 'all .2s ease-out',
       background: 'linear-gradient(#306fae, #306fae)',
       backgroundSize: '100% .2em',
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'left 0 bottom 0',
-    },
-    'a.anchor': {
-      boxShadow: 'none',
     },
     'p code': {
       fontSize: '1.1rem'

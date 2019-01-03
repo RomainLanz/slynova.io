@@ -8,6 +8,7 @@ function SEO({ description, lang, meta, keywords, title }) {
     <StaticQuery
       query={detailsQuery}
       render={data => {
+        const { siteMetadata } = data.site
         const metaDescription =
           description || data.site.siteMetadata.description
         return (
@@ -15,8 +16,13 @@ function SEO({ description, lang, meta, keywords, title }) {
             htmlAttributes={{
               lang,
             }}
-            title={title}
-            titleTemplate={`%s | ${data.site.siteMetadata.title}`}
+            {...(title ? {
+                titleTemplate: `%s - ${siteMetadata.title}`,
+                title,
+              } : {
+                title: siteMetadata.title,
+              })
+            }
             meta={[
               {
                 name: `description`,
