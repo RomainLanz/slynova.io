@@ -39,7 +39,14 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          `gatsby-remark-toc`,
+          {
+            resolve: `gatsby-remark-toc`,
+            options: {
+              mdastUtilTocOptions: {
+                maxDepth: 2,
+              },
+            },
+          },
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,

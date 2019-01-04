@@ -9,12 +9,16 @@ import { rhythm, scale } from '../utils/typography'
 
 const TableOfContents = styled.div`
   ul {
-    margin-left: 0;
     list-style: none;
+    margin-top: 0;
   }
 
   li {
     margin-bottom: 0;
+  }
+
+  li p {
+    display: inline;
   }
 
   li:before {
@@ -24,6 +28,7 @@ const TableOfContents = styled.div`
   }
 
   a {
+    background: none;
     color: #3f6fa9;
     text-decoration: none;
     border-bottom: 1px solid transparent;
