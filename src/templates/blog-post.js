@@ -44,7 +44,12 @@ class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
-    const { previous, next } = this.props.pageContext
+    const { previous, next, slug } = this.props.pageContext
+    const editUrl = `https://github.com/romainlanz/slynova.io/edit/master/content/blog/${slug.replace(
+      /\//g,
+      ''
+    )}/index.md`
+    const discussUrl = `https://mobile.twitter.com/search?q=${encodeURIComponent(`https://slynova.io${slug}`)}`
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -62,6 +67,20 @@ class BlogPostTemplate extends React.Component {
         </p>
         <TableOfContents dangerouslySetInnerHTML={{ __html: post.tableOfContents }} />
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <hr
+          style={{
+            marginBottom: rhythm(1),
+          }}
+        />
+        <p>
+          <a href={discussUrl} target="_blank" rel="nofollow noopener noreferrer">
+            Discuss on Twitter
+          </a>
+          {' | '}
+          <a href={editUrl} target="_blank" rel="nofollow noopener noreferrer">
+            Edit on Github
+          </a>
+        </p>
         <hr
           style={{
             marginBottom: rhythm(1),
