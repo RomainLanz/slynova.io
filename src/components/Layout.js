@@ -78,7 +78,7 @@ class Layout extends React.Component {
             }}
           >
             <small>
-              <strong>&copy; 2018 Copyright Romain Lanz. All rights reserved.</strong>
+              <strong>&copy; 2019 Copyright Romain Lanz. All rights reserved.</strong>
             </small>
             <small>
               This site is built with{' '}
