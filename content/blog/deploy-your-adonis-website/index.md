@@ -11,7 +11,7 @@ This article uses the Node.js framework [AdonisJs](https://adonisjs.com/) as an 
 
 The first thing to do is to create a server. Let's assume that you don't have any VPS (Virtual Private Server) available and need to get one. I'm using the service [Digital Ocean](https://digitalocean.com/) to host my server, but any VPS could do it.
 
-In the Digital Ocean _Create a Droplet_ page, I'm choosing the latest version of Ubuntu and the smallest server I can have. **This server will be sufficient to run multiple Adonis application.**
+In the Digital Ocean "_Create a Droplet_" page, I'm choosing the latest version of Ubuntu and the smallest server I can have. **This server will be sufficient to run multiple Adonis application.**
 
 ![Digital Ocean interface to create a VPS](./create-droplets.png)
 
@@ -137,6 +137,8 @@ Then you can restart the SSH daemon, exit the current session and connect again 
 > ssh romain@IP_OF_YOUR_DROPLET -p XXXXX
 ```
 
+**UPDATE:** It seems that changing the default SSH port could be a bad idea for some reasons. You can read more about those in [this article](https://www.adayinthelifeof.nl/2012/03/12/why-putting-ssh-on-another-port-than-22-is-bad-idea).
+
 ### Install a Firewall
 
 Ubuntu comes bundled with the great firewall `ufw`. Let's configure it.
@@ -159,7 +161,7 @@ sudo ufw enable
 
 ## Step 3: Create a Deploy User
 
-Now that your server is secured and you have a personal account on it we can create a deploy user that will be used by any administrators of your server to deploy and run your website.
+Now that your server is secured, and you have a personal account on it, we can create a deploy user that will be used by any administrators of your server to deploy and run your website.
 
 ```bash
 > sudo useradd -m -s /bin/bash deploy
@@ -224,10 +226,10 @@ After doing this, you need to restart your shell to have access to the `nvm` com
 
 It's time to clone your repository to get our application on the server! I highly recommend you to use a [deploy key](https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys) to deploy your application. It will allow your server to pull the code but never push it.
 
-Once you have set-up your SSH deploy key following the documentation of your git provider, clone the repository inside `/home/deploy`.
+Once you have set-up your SSH deploy key following the documentation of your git provider, clone the repository inside `/home/deploy/www`.
 
 ```bash
-> cd ~
+> cd ~  # This takes us the the home folder of the current user
 > mkdir www
 > cd www
 > git clone https://github.com/adonisjs/adonis-fullstack-app.git example.com
@@ -310,14 +312,15 @@ Now that our application is running in production we want to create a script to 
 > vim /home/deploy/www/deploy-example.sh
 ```
 
-This script will:
+This script will simply do what we have done before:
 
-1. Pull new changes;
+1. Pull new changes from your repository;
 2. Install new dependencies;
 3. Run migrations;
 4. Restart the application.
 
 ```bash
+# Content of your script
 cd example.com
 git pull
 npm i
