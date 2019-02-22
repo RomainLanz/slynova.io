@@ -44,14 +44,12 @@ Let's get further by creating a Node.js HTTP server:
 
 ```js
 // index.js
-const http = require('http')
+const { createServer } = require('http')
 
-http
-  .createServer((res, req) => {
-    res.writeHead(200, { 'Content-Type': 'text/plain' })
-    res.end('Hello World')
-  })
-  .listen(8080)
+createServer((res, req) => {
+  res.writeHead(200, { 'Content-Type': 'text/plain' })
+  res.end('Hello World')
+}).listen(8080)
 
 console.log('Listening on port 8080')
 ```
@@ -62,23 +60,21 @@ When we run the file using `node index.js` you will see `Listening on port 8080`
 
 Let's add some code to slow down our server.
 
-```js{8-11}
+```js{7-10}
 // index.js
-const http = require('http')
+const { createServer } = require('http')
 const { sleep } = require('sleep') // https://www.npmjs.com/package/sleep
 const cache = new Map()
 
-http
-  .createServer((req, res) => {
-    if (!cache.has('alreadyRunned')) {
-      sleep(1)
-      cache.set('alreadyRunned', true)
-    }
+createServer((req, res) => {
+  if (!cache.has('alreadyRunned')) {
+    sleep(1)
+    cache.set('alreadyRunned', true)
+  }
 
-    res.writeHead(200, { 'Content-Type': 'text/plain' })
-    res.end('Hello World')
-  })
-  .listen(8080)
+  res.writeHead(200, { 'Content-Type': 'text/plain' })
+  res.end('Hello World')
+}).listen(8080)
 
 console.log('Listening on port 8080')
 ```
