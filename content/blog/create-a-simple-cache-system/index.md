@@ -3,13 +3,13 @@ title: 'Create a Simple Cache System'
 date: '2019-02-22T10:00:00+0100'
 ---
 
-One of the simplest optimization you can do to speed up your application is to use a cache to avoid heavy data computation, database queries or API calls.
+One of the most straightforward optimization you can do to speed up your application is to use a cache to avoid hefty data computation, database queries or API calls.
 
 The term "cache" means "_a temporary storage space or memory that allows fast access to data_" ([dictionary.com](https://www.dictionary.com/browse/cache)). In the other hands, **think about it as simple key/value store**.
 
-There's a bunch of different cache systems. One of the most known is [Redis](https://redis.io/). It's a very good in-memory data structure store but is sometimes overkill for a small to medium size application.
+There's a bunch of different cache systems. One of the most known is [Redis](https://redis.io/). It's an excellent in-memory data structure store but is sometimes overkill for a small to medium size application.
 
-Instead of relying on a third party library, we will learn how to build our own cache system.
+Instead of relying on a third-party library, we will learn how to build our cache system.
 
 Since ES2015, JavaScript has the [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) object which is an `Object` on steroid and can easily be used for caching.
 
@@ -36,7 +36,7 @@ cache.set('mykey', veryIntensiveCPUFunction())
 const data = cache.has('mykey') ? cache.get('mykey') : veryIntensiveCPUFunction()
 ```
 
-In this example, we are going to avoid the call to `veryIntensiveCPUFunction()` since we already runned it at the startup of our application and we stored the returned value in the cache (you may also want to take a look to the [memoization technique](https://en.wikipedia.org/wiki/Memoization)).
+In this example, we are going to avoid the call to `veryIntensiveCPUFunction()` since we already ran it at the startup of our application and we stored the returned value in the cache (you may also want to take a look to the [memoization technique](https://en.wikipedia.org/wiki/Memoization)).
 
 ## Creating a Real Example
 
@@ -58,7 +58,7 @@ console.log('Listening on port 8080')
 
 When we run the file using `node index.js` you will see `Listening on port 8080` but the code will never exit.
 
-**Node will keep running** and will wait for any request on port 8080. This means **everything we do will be kept in memory**!
+**Node will keep running** and will wait for any request on port 8080. It means **everything we do will be held in memory**!
 
 Let's add some code to slow down our server.
 
@@ -83,9 +83,9 @@ http
 console.log('Listening on port 8080')
 ```
 
-Open your browser and hit `localhost:8080` the request will takes ~1 second to display `Hello World`. Then, if you refresh the page it should be instant because we never reach the slow code.
+Open your browser and hit `localhost:8080` the request will take ~1 second to display `Hello World`. Then, if you refresh the page, it should be instant because we never reach the slow code.
 
-When we decompose this code, here's what happen:
+When we decompose this code, here's what happens:
 
 1. We create our cache (`cache`);
 2. We create a Node server listening on port 8080;
@@ -146,17 +146,17 @@ async index ({ view }) {
 }
 ```
 
-In this code we are doing exactly the same as in the example.
+In this code, we are doing precisely the same as in the example.
 
-1. Checking if the key `posts` is polulated in the cache;
-2. If not, fecthing the posts and polulating the cache;
+1. Checking if the key `posts` is populated in the cache;
+2. If not, fetching the posts and filling the cache;
 3. Send back the cached posts.
 
-The first time you will reach `/` your request will take ~3 seconds to run. All the next request we never be slow.
+The first time you will reach `/` your request will take ~3 seconds to run. All the next requests will never be slow.
 
 We speed up our blog but **we also added an undesired behaviour**. Since we aren't clearing the cache when storing a post, the new post will never be displayed on our website.
 
-You can fix this by clearing the cache everytime a new post is written (you will need also to clear the cache in other methods like `update` or `destroy`).
+You can fix this by clearing the cache every time a new post is written (you will also need to clear the cache in other methods like `update` or `destroy`).
 
 ```js{6}
 // PostController.js
@@ -176,7 +176,7 @@ In the last example, we decide when the cache should be cleared. We can also aut
 
 We used this technique in the [Lausanne-Sport eSports WS](https://github.com/Lausanne-eSports/api.els.team) to avoid querying to much the [Twitch API](https://dev.twitch.tv).
 
-Let's assume we need data from a third party API and we are limited to 60 queries per hour. This means we need to keep in the cache the data for at least one minute between each call.
+Let's assume we need data from a third party API and we are limited to 60 queries per hour. It means we need to keep in the cache the data for at least one minute between each call.
 
 ```js{9}
 const got = require('got') // https://www.npmjs.com/package/got
@@ -193,7 +193,7 @@ if (!Cache.has('example.users')) {
 
 In this code, we added an array as the value of our cache. It contains the response body and a timestamp for when the cache has been hydrated.
 
-When we will read the cache, we will also check if the lifetime of the cache is more than a minute.
+When we read the cache, we will also check if the lifetime of the cache is more than a minute.
 
 ```js{6}
 // requires...
@@ -208,13 +208,13 @@ if (Cache.has('example.users')) {
 }
 ```
 
-At the line 6, we check if the data has been cached for less than 60 seconds, if that's the case, we can return the cached data.
+At line 6, we check if the data has been cached for less than 60 seconds, if that's the case, we can return the cached data.
 
 ## Going Further
 
 To make our life easier, we can wrap our cache into an object that will automate things for us.
 
-Let's start by creating a wrapper arround our cache.
+Let's start by creating a wrapper around our cache.
 
 ```js
 // app/Cache.js
