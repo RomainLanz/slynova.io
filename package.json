@@ -38,9 +38,9 @@
     "typography": "^0.16.17"
   },
   "devDependencies": {
-    "eslint": "^5.12.1",
+    "eslint": "^5.14.1",
     "eslint-plugin-react": "^7.12.4",
-    "prettier": "^1.16.0"
+    "prettier": "^1.16.4"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
