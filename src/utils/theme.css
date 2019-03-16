@@ -1,43 +1,7 @@
-@font-face {
-  font-family: 'mononoki';
-  src: url('https://madmalik.github.io/mononoki/fonts/mononoki-Regular.eot?#iefix') format('embedded-opentype'),
-    /* IE6-IE8 */ url('https://madmalik.github.io/mononoki/fonts/mononoki-Regular.woff2') format('woff2'),
-    /* Super Modern Browsers */ url('https://madmalik.github.io/mononoki/fonts/mononoki-Regular.woff') format('woff'),
-    /* Pretty Modern Browsers */ url('https://madmalik.github.io/mononoki/fonts/mononoki-Regular.ttf')
-      format('truetype'); /* Safari, Android, iOS */
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'mononoki';
-  src: url('https://madmalik.github.io/mononoki/fonts/mononoki-Bold.eot?#iefix') format('embedded-opentype'),
-    /* IE6-IE8 */ url('https://madmalik.github.io/mononoki/fonts/mononoki-Bold.woff2') format('woff2'),
-    /* Super Modern Browsers */ url('https://madmalik.github.io/mononoki/fonts/mononoki-Bold.woff') format('woff'),
-    /* Pretty Modern Browsers */ url('https://madmalik.github.io/mononoki/fonts/mononoki-Bold.ttf') format('truetype'); /* Safari, Android, iOS */
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'mononoki';
-  src: url('https://madmalik.github.io/mononoki/fonts/mononoki-Italic.eot?#iefix') format('embedded-opentype'),
-    /* IE6-IE8 */ url('https://madmalik.github.io/mononoki/fonts/mononoki-Italic.woff2') format('woff2'),
-    /* Super Modern Browsers */ url('https://madmalik.github.io/mononoki/fonts/mononoki-Italic.woff') format('woff'),
-    /* Pretty Modern Browsers */ url('https://madmalik.github.io/mononoki/fonts/mononoki-Italic.ttf') format('truetype'); /* Safari, Android, iOS */
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'mononoki';
-  src: url('https://madmalik.github.io/mononoki/fonts/mononoki-BoldItalic.eot?#iefix') format('embedded-opentype'),
-    /* IE6-IE8 */ url('https://madmalik.github.io/mononoki/fonts/mononoki-BoldItalic.woff2') format('woff2'),
-    /* Super Modern Browsers */ url('https://madmalik.github.io/mononoki/fonts/mononoki-BoldItalic.woff') format('woff'),
-    /* Pretty Modern Browsers */ url('https://madmalik.github.io/mononoki/fonts/mononoki-BoldItalic.ttf')
-      format('truetype'); /* Safari, Android, iOS */
-  font-weight: bold;
-  font-style: italic;
+html,
+body {
+  font-family: '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', '"Noto Sans"',
+    'sans-serif', '"Apple Color Emoji"', '"Segoe UI Emoji"', '"Segoe UI Symbol"', '"Noto Color Emoji"';
 }
 
 /**
@@ -47,7 +11,7 @@ code[class*='language-'],
 pre[class*='language-'] {
   color: white;
   background: none;
-  font-family: mononoki, Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace;
+  font-family: 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace';
   font-feature-settings: normal;
   text-align: left;
   white-space: pre;

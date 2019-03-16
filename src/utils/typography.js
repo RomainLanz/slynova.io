@@ -3,14 +3,6 @@ import Typography from 'typography'
 const typography = new Typography({
   baseFontSize: '19px',
   baseLineHeight: '37px',
-  headerFontFamily: ['Fira Sans'],
-  bodyFontFamily: ['Fira Sans'],
-  googleFonts: [
-    {
-      name: 'Fira Sans',
-      styles: ['400', '400i', '700', '700i'],
-    },
-  ],
   overrideStyles: () => ({
     'a.gatsby-resp-image-link': {
       background: 'none',
