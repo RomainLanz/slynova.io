@@ -1,38 +1,41 @@
-import Typography from 'typography'
+// import './app.css'
+// import './code.css'
 
-const typography = new Typography({
-  baseFontSize: '19px',
-  baseLineHeight: '37px',
-  overrideStyles: () => ({
-    'a.gatsby-resp-image-link': {
-      background: 'none',
-    },
-    'p a': {
-      color: 'inherit',
-      outline: 'none',
-      textDecoration: 'none',
-      background: 'linear-gradient(#306fae, #306fae)',
-      backgroundSize: '100% .2em',
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'left 0 bottom 0',
-    },
-    'p code': {
-      fontSize: '1.1rem',
-    },
-    'li code': {
-      fontSize: '1rem',
-    },
-    h1: {
-      fontSize: '90px',
-    },
-  }),
-})
+// import Typography from 'typography'
 
-// Hot reload typography in development.
-if (process.env.NODE_ENV !== `production`) {
-  typography.injectStyles()
-}
+// const typography = new Typography({
+//   baseFontSize: '19px',
+//   baseLineHeight: 2,
+//   bodyFontFamily: [
+//     '-apple-system',
+//     'BlinkMacSystemFont',
+//     '"Segoe UI"',
+//     'Roboto',
+//     '"Helvetica Neue"',
+//     'Arial',
+//     '"Noto Sans"',
+//     'sans-serif',
+//     '"Apple Color Emoji"',
+//     '"Segoe UI Emoji"',
+//     '"Segoe UI Symbol"',
+//     '"Noto Color Emoji"',
+//   ],
+//   headerFontFamily: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
+//   overrideStyles: () => ({
+//     'a.gatsby-resp-image-link': {
+//       background: 'none',
+//     },
+//     h1: {
+//       fontSize: '90px',
+//     },
+//   }),
+// })
 
-export default typography
-export const rhythm = typography.rhythm
-export const scale = typography.scale
+// // Hot reload typography in development.
+// if (process.env.NODE_ENV !== `production`) {
+//   typography.injectStyles()
+// }
+
+// export default typography
+// export const rhythm = typography.rhythm
+// export const scale = typography.scale

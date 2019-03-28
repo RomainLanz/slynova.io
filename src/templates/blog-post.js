@@ -5,7 +5,6 @@ import styled from 'styled-components'
 import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
-import { rhythm, scale } from '../utils/typography'
 
 const TableOfContents = styled.div`
   ul {
@@ -55,23 +54,12 @@ class BlogPostTemplate extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         <h1>{post.frontmatter.title}</h1>
-        <p
-          style={{
-            ...scale(-1 / 5),
-            display: `block`,
-            marginBottom: rhythm(1),
-            marginTop: rhythm(-1),
-          }}
-        >
+        <p>
           Published {post.frontmatter.date} | ~ Reading Time: {post.timeToRead} mins
         </p>
         <TableOfContents dangerouslySetInnerHTML={{ __html: post.tableOfContents }} />
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
+        <hr />
         <p>
           <a href={discussUrl} target="_blank" rel="nofollow noopener noreferrer">
             Discuss on Twitter
@@ -81,11 +69,7 @@ class BlogPostTemplate extends React.Component {
             Edit on Github
           </a>
         </p>
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
+        <hr />
         <Bio />
 
         <ul
