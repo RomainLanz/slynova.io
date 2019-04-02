@@ -1,6 +1,0 @@
-{
-  "editor.formatOnSave": true,
-  "markdownlint.config": {
-    "MD002": { "level": 2 }
-  }
-}
