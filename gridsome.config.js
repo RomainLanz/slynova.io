@@ -25,6 +25,15 @@ module.exports = {
           }
         }
       }
+    },
+    {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'UA-131756726-1',
+        set: [
+          { field: 'anonymizeIp', value: true }
+        ]
+      }
     }
   ],
 
