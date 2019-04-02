@@ -1,8 +1,8 @@
 <template>
    <div class="post-meta">
-      Posted {{ post.date }}.
+      Published {{ post.date }} |
       <template v-if="post.timeToRead">
-        <strong>{{ post.timeToRead }} min read.</strong>
+        ~ Reading Time: <strong>{{ post.timeToRead }} mins</strong>
       </template>
     </div>
 </template>

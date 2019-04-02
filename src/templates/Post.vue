@@ -77,10 +77,13 @@ query Post ($path: String!) {
 .post-title {
   padding: calc(var(--space) / 2) 0 calc(var(--space) / 2);
   text-align: center;
+
+  &__text {
+    font-size: calc(var(--base-font-size) * 3);
+  }
 }
 
 .post {
-
   &__header {
     width: calc(100% + var(--space) * 2);
     margin-left: calc(var(--space) * -1);

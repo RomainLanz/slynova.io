@@ -51,6 +51,7 @@ export default {
   }
 
   &__title {
+    font-size: calc(var(--base-font-size) * 2);
     margin-top: 0;
   }
 
