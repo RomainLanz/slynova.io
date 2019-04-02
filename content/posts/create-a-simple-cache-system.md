@@ -64,7 +64,7 @@ When we run the file using `node index.js` you will see `Listening on port 8080`
 
 Let's add some code to slow down our server.
 
-```js{7-10}
+```js
 // index.js
 const { createServer } = require('http')
 const { sleep } = require('sleep') // https://www.npmjs.com/package/sleep
@@ -158,7 +158,7 @@ We speed up our blog but **we also added an undesired behaviour**. Since we aren
 
 You can fix this by clearing the cache every time a new post is written (you will also need to clear the cache in other methods like `update` or `destroy`).
 
-```js{6}
+```js
 // PostController.js
 async store ({ session, request, response }) {
   // ...
@@ -178,7 +178,7 @@ We used this technique in the [Lausanne-Sport eSports WS](https://github.com/Lau
 
 Let's assume we need data from a third-party API and we are limited to 60 queries per hour. It means we need to keep in the cache the data for at least one minute between each call.
 
-```js{9}
+```js
 const got = require('got') // https://www.npmjs.com/package/got
 const Cache = use('App/Cache')
 
@@ -195,7 +195,7 @@ In this code, we added an array as the value of our cache. It contains the respo
 
 When we read the cache, we will also check if the lifetime of the cache is more than a minute.
 
-```js{6}
+```js
 // requires...
 
 if (Cache.has('example.users')) {
