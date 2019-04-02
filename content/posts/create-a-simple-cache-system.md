@@ -37,7 +37,9 @@ cache.set('mykey', veryIntensiveCPUFunction())
 
 // ...
 
-const data = cache.has('mykey') ? cache.get('mykey') : veryIntensiveCPUFunction()
+const data = cache.has('mykey')
+  ? cache.get('mykey')
+  : veryIntensiveCPUFunction()
 ```
 
 In this example, we are going to avoid the call to `veryIntensiveCPUFunction()` since we already ran it at the startup of our application and we stored the returned value in the cache (you may also want to take a look to the [memoization technique](https://en.wikipedia.org/wiki/Memoization)).
