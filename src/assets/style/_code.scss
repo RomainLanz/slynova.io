@@ -24,42 +24,42 @@ code {
 
 code[class*="language-"],
 pre[class*="language-"] {
-	color: white;
-	font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-	text-align: left;
-	white-space: pre;
-	word-spacing: normal;
-	word-break: normal;
-	word-wrap: normal;
-	line-height: 1.5;
+  color: white;
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
 
-	-moz-tab-size: 2;
-	-o-tab-size: 2;
-	tab-size: 2;
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
 
-	-webkit-hyphens: none;
-	-moz-hyphens: none;
-	-ms-hyphens: none;
-	hyphens: none;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
 }
 
 @media print {
-	code[class*="language-"],
-	pre[class*="language-"] {
-		text-shadow: none;
-	}
+  code[class*="language-"],
+  pre[class*="language-"] {
+    text-shadow: none;
+  }
 }
 
 /* Code blocks */
 pre[class*="language-"] {
-	overflow: auto;
+  overflow: auto;
 }
 
 /* Inline code */
 :not(pre) > code[class*="language-"] {
-	color: var(--body-color);
-	border-radius: var(--radius);
-	white-space: normal;
+  color: var(--body-color);
+  border-radius: var(--radius);
+  white-space: normal;
 }
 
 .token.attr-name {
