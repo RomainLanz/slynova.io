@@ -11,7 +11,7 @@ export default function (Vue, { router, head, isClient }) {
   Vue.component('Layout', DefaultLayout)
 }
 
-if (typeof navigator !== undefined) {
+if (typeof navigator !== 'undefined') {
   navigator.serviceWorker.getRegistrations()
     .then(registrations => {
       for(let registration of registrations) {
