@@ -11,10 +11,12 @@ export default function (Vue, { router, head, isClient }) {
   Vue.component('Layout', DefaultLayout)
 }
 
-navigator.serviceWorker.getRegistrations()
-  .then(registrations => {
-    for(let registration of registrations) {
-      registration.unregister()
+if (typeof navigator !== undefined) {
+  navigator.serviceWorker.getRegistrations()
+    .then(registrations => {
+      for(let registration of registrations) {
+        registration.unregister()
+      }
     }
-  }
-)
+  )
+}
