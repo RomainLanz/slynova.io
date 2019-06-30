@@ -698,9 +698,10 @@
     prismjs "^1.15.0"
     unist-util-visit "^1.4.0"
 
-"@gridsome/source-filesystem@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@gridsome/source-filesystem/-/source-filesystem-0.3.0.tgz#c659440d014a9337e7db3de7109b6ce11e9ac74a"
+"@gridsome/source-filesystem@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@gridsome/source-filesystem/-/source-filesystem-0.5.0.tgz#7b88f5dcdde1014c6c7da5c5bcbca0e284101992"
+  integrity sha512-gTtUw3jesCG/zsIQT1k555Bn+3HC/xK46R3747olTYThldzun31wAW+YHBCc2l8mAsFp++JkCxgxKGdy8yaJhg==
   dependencies:
     chokidar "^2.0.4"
     fs-extra "^7.0.0"
@@ -1905,7 +1906,7 @@ character-reference-invalid@^1.0.0:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/character-reference-invalid/-/character-reference-invalid-1.1.2.tgz#21e421ad3d84055952dab4a43a04e73cd425d3ed"
 
-chokidar@^2.0.2, chokidar@^2.1.0:
+chokidar@^2.0.2, chokidar@^2.0.4, chokidar@^2.1.0:
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-2.1.5.tgz#0ae8434d962281a5f56c72869e79cb6d9d86ad4d"
   integrity sha512-i0TprVWp+Kj4WRPtInjexJ8Q+BqTE909VpH8xVhXrJkoc5QC8VO9TryGOqTr+2hljzc1sC62t22h5tZePodM/A==
@@ -1921,24 +1922,6 @@ chokidar@^2.0.2, chokidar@^2.1.0:
     path-is-absolute "^1.0.0"
     readdirp "^2.2.1"
     upath "^1.1.1"
-  optionalDependencies:
-    fsevents "^1.2.7"
-
-chokidar@^2.0.4:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-2.1.2.tgz#9c23ea40b01638439e0513864d362aeacc5ad058"
-  dependencies:
-    anymatch "^2.0.0"
-    async-each "^1.0.1"
-    braces "^2.3.2"
-    glob-parent "^3.1.0"
-    inherits "^2.0.3"
-    is-binary-path "^1.0.0"
-    is-glob "^4.0.0"
-    normalize-path "^3.0.0"
-    path-is-absolute "^1.0.0"
-    readdirp "^2.2.1"
-    upath "^1.1.0"
   optionalDependencies:
     fsevents "^1.2.7"
 
@@ -8350,7 +8333,7 @@ unset-value@^1.0.0:
     has-value "^0.3.1"
     isobject "^3.0.0"
 
-upath@^1.1.0, upath@^1.1.1:
+upath@^1.1.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/upath/-/upath-1.1.2.tgz#3db658600edaeeccbe6db5e684d67ee8c2acd068"
   integrity sha512-kXpym8nmDmlCBr7nKdIx8P2jNBa+pBpIUFRnKJ4dr8htyYGJFokkr2ZvERRtUN+9SY+JqXouNgUPtv6JQva/2Q==
