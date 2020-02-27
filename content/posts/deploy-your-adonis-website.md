@@ -238,7 +238,7 @@ Once you have set-up your SSH deploy key following the documentation of your git
 > cd www
 > git clone https://github.com/adonisjs/adonis-fullstack-app.git example.com
 > cd example.com
-> npm i
+> npm i --production
 ```
 
 Clone your `.env.example` file and change values according to your setup.
@@ -327,7 +327,7 @@ This script will simply do what we have done before:
 # Content of your script
 cd example.com
 git pull
-npm i
+npm i --production
 node ace migration:run --force
 pm2 restart app
 ```
